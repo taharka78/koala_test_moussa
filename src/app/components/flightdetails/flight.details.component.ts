@@ -10,7 +10,7 @@ import { IContractDetailDTO } from '../../com/services/contract/dto/i.contract.d
 })
 export class FlightdetailsComponent implements OnInit {
 
-  public cDetailsData:IContractDetailDTO;
+  public cDetailsData:any;
   constructor(private _route:ActivatedRoute, private _router:Router, private contractService:ContractService) { 
   }
 
