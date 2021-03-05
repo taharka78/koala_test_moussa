@@ -1,0 +1,28 @@
+.overlay {
+    position:fixed;
+    display:block;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:#f6f3ee;
+    z-index:99999;
+}
+
+.overlay-relative {
+    position:relative;
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:#f6f3ee;
+    z-index:99999;
+}
+
+img{
+    height: 80%;
+    width: auto;
+}
+
+.overlay-relative .justify-content-center{
+    height: 100%;
+}

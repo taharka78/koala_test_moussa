@@ -1,0 +1,8 @@
+ <div *ngIf="isLoading | async" [ngClass]="{'overlay-relative' : !absolute, 'overlay':absolute}">
+    <koala-header *ngIf="header" class="d-flex justify-content-center" subtitle=""></koala-header>
+    <div class="d-flex justify-content-center">
+        <div class="align-self-center">
+          <img src="assets/images/globe.gif" />
+        </div>
+    </div>
+</div>

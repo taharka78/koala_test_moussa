@@ -1,0 +1,24 @@
+.info{
+    margin-left: 30px;
+}
+.card-body{
+    padding: 30px;
+}
+
+:host .card{
+    background-color: #fffbf5!important;
+    border:none;
+}
+
+:host .card:hover{
+    background-color: #eeebe8!important;
+}
+
+img{
+    width : auto;
+    height: 78px;
+}
+
+p{
+    margin-bottom: 0;
+}

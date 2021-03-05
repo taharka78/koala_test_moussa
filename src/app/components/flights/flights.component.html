@@ -1,0 +1,13 @@
+<section class="container-fluid">
+    <div class="row d-none d-md-flex">
+        <div class="col-12 col-md-5">
+            <koala-flight-list type="desktop"></koala-flight-list>
+        </div>
+        <div class="col-md-7">
+            <router-outlet name="rcontent"></router-outlet>
+        </div>
+    </div>
+    <div class="d-md-none">
+        <router-outlet></router-outlet>
+    </div>
+</section>

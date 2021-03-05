@@ -1,0 +1,12 @@
+.subtitle{
+    margin-top : 2em;
+    text-align: center;
+}
+
+:host{
+    margin: 2rem 0 2rem 0;
+}
+
+img{
+    width: 130px;
+}

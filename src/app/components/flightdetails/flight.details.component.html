@@ -1,0 +1,68 @@
+
+
+<koala-header class="d-flex justify-content-center"></koala-header>
+<div class="details full-height">
+            <div class="d-flex justify-content-center">
+                <div class="col-12" *ngIf="cDetailsData">
+                    <div class="intro" [ngSwitch]="cDetailsData.claim.status">
+                        <h3>Claim summary</h3>
+                        <p *ngSwitchCase="'accepted'">this flight was eligible for compensation.We thank you for your trust.</p>
+                        <p *ngSwitchCase="'rejected'">Unfortunately, this flight was not eligible for compensation.We thank you for your trust.</p>
+                    </div>
+                    <table class="table table-borded table-responsive" id="table-list">
+                        <thead class="table-dark">
+                            <tr cellspacing="0" cellpadding="0">
+                                <th colspan="2">
+                                    <h4>{{ cDetailsData.flight.start | date : 'MMM d, y' : 'en-EN'}}</h4>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="no-margin-top" colspan="2">
+                                    <div class="d-flex align-items-baseline travel-info">
+                                        <h6>{{cDetailsData.flight.from.name}} <br />({{cDetailsData.flight.from.iata}})</h6>
+                                        <hr class="" style="height: 2px;width:20px;background-color: white;" />
+                                        <h6>{{cDetailsData.flight.to.name}} <br />({{cDetailsData.flight.to.iata}})</h6>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <dl>
+                                        <dt>Flight N°</dt>
+                                        <dd><strong>{{cDetailsData.flight.name}}</strong></dd>
+                                    </dl>
+                                </td>
+                                <td>
+                                    <dl>
+                                        <dt>Departure hour</dt>
+                                        <dd><strong>{{ cDetailsData.flight.start | date : 'h:mm' : 'en-EN'}}</strong></dd>
+                                    </dl>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <dl class="delay">
+                                        <dt>Delay</dt>
+                                        <dd><strong [ngClass]="{'red' : (cDetailsData.claim.status == 'accepted'), 'green' : (cDetailsData.claim.status == 'rejected')}">{{getDelay(cDetailsData.claim.flightStatus.delay)}}</strong></dd>
+                                    </dl>
+                                </td>
+                                <td>
+                                    <dl>
+                                        <dt>Required delay</dt>
+                                        <dd><strong>{{getDelay(cDetailsData.contract.product.minDelay)}}</strong></dd>
+                                    </dl>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-md-none">
+                        <div class=" d-flex justify-content-center full-width">
+                            <a routerLink="/flights" class="btn btn-primary">Back</a>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+</div>

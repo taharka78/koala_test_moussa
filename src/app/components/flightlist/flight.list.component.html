@@ -1,0 +1,6 @@
+<koala-header class="d-flex justify-content-center" subtitle="Your flights"></koala-header>
+<div class="d-flex justify-content-center">
+    <div class="flex-column k-flights-card">
+        <koala-card *ngFor="let contract of contracts" [data]="contract" (click)="goToSummary(contract.id)"></koala-card>
+    </div>
+</div>

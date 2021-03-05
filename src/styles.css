@@ -1,0 +1,24 @@
+html, body{
+    font-family: 'Roboto'!important;
+    background-color : #f6f3ee!important;
+    min-height: 100%;
+}
+
+.btn-primary{
+  background-color: #20dea6!important;
+  border-color: #20dea6!important;
+}
+
+.green{
+  color : #20dea6
+}
+.red{
+  color : red
+}
+.full-height {
+    height: 100%;
+  }
+
+  .full-width {
+    width: 100%;
+  }

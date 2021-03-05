@@ -1,0 +1,54 @@
+.intro{ text-align: center; }
+thead tr{ text-align: center; }
+.travel-info{ margin: 1em; }
+table{
+    display: table;
+}
+.table-dark{
+    background-color:#162f37!important;
+}
+
+.table-dark td, .table-dark th, .table-dark thead th {
+    border-collapse: unset;
+    border-color: #162f37!important;
+}
+
+table tr th{
+    border : solid 2px #162f37;
+}
+table tr td{
+    border-bottom : solid 2px #162f37;
+}
+table tr td:nth-child(1){    
+    border-left : solid 2px #162f37;
+}
+table tr td:nth-child(2){
+    border-right : solid 2px #162f37;
+}
+dt{
+    font-weight: lighter;
+}
+
+h4{
+    color : #a7a7a7;
+}
+
+.no-margin-top{ padding : 0 .75rem 0 .75rem }
+koala-loader{
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.details .justify-content-center{
+    height: 100%;
+    padding: 10px;
+}
+
+.table-container{
+    width : 80%;
+}
+
+.overlay{
+    position: relative!important;
+}
